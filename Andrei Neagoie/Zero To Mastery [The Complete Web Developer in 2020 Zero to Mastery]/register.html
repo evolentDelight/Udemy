@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <div>
+        <form action="index.html" method="GET">
+            <table>
+                <tr>
+                    <td>First Name: </td>
+                    <td><input type="text" name="fname"></td>
+                </tr>
+                <tr>
+                    <td>Last Name: </td>
+                    <td><input type="text" name="lname"></td>
+                </tr>
+                <tr>
+                    <td>Email: </td>
+                    <td><input type="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td>Password: </td>
+                    <td><input type="password" name="password" min="5"></td>
+                </tr>
+                <tr>
+                    <td>Birthday: </td>
+                    <td><input type="date" name="bdate"></td>
+                </tr>
+                <tr>
+                    <td>Gender: </td>
+                    <td>
+                        <input type="radio" name="gender" value="Male">Male<br>
+                        <input type="radio" name="gender" value="Female">Female<br>
+                        <input type="radio" name="gender" value="Transgender">Transgender<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pets: </td>
+                    <td>
+                        <input type="checkbox" name="pets" value="Cat">Cat<br>
+                        <input type="checkbox" name="pets" value="Dog">Dogs<br>
+                        <input type="checkbox" name="pets" value="Fox">Fox<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cars: </td>
+                    <td>
+                        <select>
+                            <option name="cars" value="volvo">Volvo</option>
+                            <option name="cars" value="Audi">Audi</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Register">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+</body>
+</html>
