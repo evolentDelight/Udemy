@@ -1,0 +1,21 @@
+/*************************TAG SELECTORS**************************/
+
+h1{
+    color:red;
+}
+
+img:hover{
+    background-color: cyan;
+}
+
+/************************CLASS SELECTORS*************************/
+
+.bacon{
+    background-color: red;
+}
+
+.broccoli{
+    background-color: lightgreen;
+}
+
+/***************************ID SELECTORS*************************/
