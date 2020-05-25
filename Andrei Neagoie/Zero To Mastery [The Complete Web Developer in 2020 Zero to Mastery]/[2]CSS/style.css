@@ -1,0 +1,27 @@
+#nav{
+    text-align: right;
+}
+
+body{
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h2{
+    color: #2B4970;
+    text-align: center;
+    border: 5px solid rgba(8, 30, 57, 0.65);
+
+    cursor: pointer;
+}
+
+p{
+    color: #000203;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+}
