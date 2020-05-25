@@ -1,4 +1,4 @@
-#nav{
+nav{
     text-align: right;
 }
 
@@ -9,16 +9,30 @@ body{
     background-attachment: fixed;
 }
 
+img{
+    float: left;
+}
+
+footer{
+    clear: both;
+    text-align: center;
+}
+
 h2{
     color: #2B4970;
     text-align: center;
-    border: 5px solid rgba(8, 30, 57, 0.65);
+    border: 5px solid rgba(8, 30, 57, 1);
 
     cursor: pointer;
 }
 
 p{
     color: #000203;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2.5em;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 li{
