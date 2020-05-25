@@ -1,0 +1,17 @@
+body{
+    background-color:mintcream;
+}
+
+hr{
+    border-color: steelblue;
+    border-style: none;
+    border-bottom-style: dotted;
+    border-width: 7.5px;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+    width: 65px;
+}
+
+h1, h3{
+    color:#0d98ba;
+}
