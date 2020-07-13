@@ -1,0 +1,32 @@
+body{
+    margin: 0px;
+}
+
+.container{
+    display: flex;/*activates flexbox*/
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1{
+    font-family: "Cantora One", sans-serif;
+    font-size: 3em;
+    border-bottom: 2px solid pink;
+    border-right: 2px solid pink;
+    width: 400px;
+    text-align: center;
+    box-shadow: 4px 4px 5px #888888;
+    margin: 5px;
+    margin-top: 10px;
+}
+
+img{
+    width: 450px;
+    height: 300px;
+    margin: 10px;
+    transition: all 0.20s;
+}
+
+img:hover{
+    transform: scale(1.1);
+}
