@@ -13,7 +13,7 @@ passport.use(
       callbackURL: "/auth/google/callback",
     },
     (accessToken, refreshToken, profile, done) => {
-      User.findOne({ googleID: profile.id })//Query returns Promise
+      User.findOne({ googleID: profile.id }) //Query returns Promise
         .then((existingUser) => {
           if (existingUser) {
             //we already have a record with the given Profile ID
@@ -22,10 +22,13 @@ passport.use(
             //we do not have a record with the given ID, make a new record
             new User({ googleID: profile.id })
               .save()
-              .then(user => done(null, user));
+              .then((user) => done(null, user));
           }
-        }
-      );
+        });
     }
   )
 );
+/*
+Passes to Passport authentication process
+done(error, UserRecord)
+*/
