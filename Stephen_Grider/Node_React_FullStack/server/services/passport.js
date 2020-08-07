@@ -20,7 +20,8 @@ passport.use(
     {
       clientID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
-      callbackURL: "/auth/google/callback",
+      callbackURL: "/auth/google/callback",//"/auth/google/callback drops secure in http(s) -> Full URI is one option"
+      proxy: true//Other method to obtain https - "Trust the proxy"
     },
     (accessToken, refreshToken, profile, done) => {
       User.findOne({ googleID: profile.id }) //Query returns Promise
