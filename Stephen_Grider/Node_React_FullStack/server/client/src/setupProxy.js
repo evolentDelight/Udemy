@@ -11,5 +11,5 @@ module.exports = function (app) {
 
 /* Stephen Grider Node React Course
   Do not add proxy configuration
-  Dot not add changeOrigin: true to proxy script
+  Do not add changeOrigin: true to proxy script
 */
