@@ -20,22 +20,19 @@ passport.use(
     {
       clientID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
-      callbackURL: "/auth/google/callback",//"/auth/google/callback drops secure in http(s) -> Full URI is one option"
-      proxy: true//Other method to obtain https - "Trust the proxy" - this is due to heroku being a proxy
+      callbackURL: "/auth/google/callback", //"/auth/google/callback drops secure in http(s) -> Full URI is one option"
+      proxy: true, //Other method to obtain https - "Trust the proxy" - this is due to heroku being a proxy
     },
-    (accessToken, refreshToken, profile, done) => {
-      User.findOne({ googleID: profile.id }) //Query returns Promise
-        .then((existingUser) => {
-          if (existingUser) {
-            //we already have a record with the given Profile ID
-            done(null, existingUser);
-          } else {
-            //we do not have a record with the given ID, make a new record
-            new User({ googleID: profile.id })
-              .save()
-              .then((user) => done(null, user));
-          }
-        });
+    async (accessToken, refreshToken, profile, done) => {
+      const existingUser = await User.findOne({ googleID: profile.id }); //Query returns Promise
+
+      if (existingUser) {
+        //we already have a record with the given Profile ID
+        return done(null, existingUser);//By returning, the else statement after can be ignored
+      }
+      //we do not have a record with the given ID, make a new record
+      const user = await new User({ googleID: profile.id }).save();
+      done(null, user);
     }
   )
 );
