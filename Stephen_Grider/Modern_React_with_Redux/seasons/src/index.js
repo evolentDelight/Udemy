@@ -2,20 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 class App extends React.Component {
-  constructor(props) {
+  /*constructor(props) {
     super(props);
 
     this.state = { lat: null, errorMessage: "" };
-
-    window.navigator.geolocation.getCurrentPosition(
-      (position) => {
-        this.setState({ lat: position.coords.latitude });
-      },
-      (err) => {
-        this.setState({ errorMessage: err.message });
-      }
-    );
-  }
+  }*/
+  //constructor and line below have the same effect
+  state = { lat: null, errorMessage: "" }; //no "this" statement
+  //This line is converted to a similar code as above by Babel
+  //Abbreviation
 
   /* Component LifeCycle
 
@@ -28,7 +23,14 @@ class App extends React.Component {
   */
 
   componentDidMount() {
-    console.log("My component was rendered to the screen");
+    window.navigator.geolocation.getCurrentPosition(
+      (position) => {
+        this.setState({ lat: position.coords.latitude });
+      },
+      (err) => {
+        this.setState({ errorMessage: err.message });
+      }
+    );
   }
 
   componentDidUpdate() {
