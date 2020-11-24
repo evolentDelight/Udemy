@@ -17,6 +17,24 @@ class App extends React.Component {
     );
   }
 
+  /* Component LifeCycle
+
+    constructor
+    render - constantly called at each iteration of updates
+    componentDidMount - After initial render
+    componentDidUpdate - At every update/rerender
+    componentWillUnMount - When component is removed
+  
+  */
+
+  componentDidMount() {
+    console.log("My component was rendered to the screen");
+  }
+
+  componentDidUpdate() {
+    console.log("My component was just updated - it rerendered");
+  }
+
   render() {
     if (this.state.errorMessage && !this.state.lat) {
       return <div>Error: {this.state.errorMessage}</div>;
