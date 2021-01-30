@@ -19,17 +19,17 @@ class SearchBar extends React.Component {
     //Arrow functions(2015 implementation) automatically binds this to any expected references to this
     event.preventDefault();
 
-    console.log(this.state.term);
+    this.props.onSubmit(this.state.term);
   };
 
   //Fix #3
-  onFormSubmit(event) {
-    //After creating an anonymous arrow function in the JSX declaration
-    //onSubmit={(event) => this.onFormSubmit(event)} Pass event property
-    event.preventDefault();
+  // onFormSubmit(event) {
+  //   //After creating an anonymous arrow function in the JSX declaration
+  //   //onSubmit={(event) => this.onFormSubmit(event)} Pass event property
+  //   event.preventDefault();
 
-    console.log(this.state.term);
-  }
+  //   console.log(this.state.term);
+  // }
 
   render() {
     return (
